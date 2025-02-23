@@ -239,7 +239,7 @@ h2 {
         padding: 5px;
     }
     .game-header h2 {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     .game-header button {
@@ -265,5 +265,9 @@ h2 {
 
     #game-result {
         font-size: 1em;
+    }
+    #pre-game-options button {
+        padding: 6px 10px;
+        font-size: 0.8em;
     }
 }
