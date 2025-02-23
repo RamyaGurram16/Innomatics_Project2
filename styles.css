@@ -167,85 +167,71 @@ h2 {
 }
 
 /* ✅ MOBILE-ONLY CHANGES (Screen width ≤ 600px) */
-@media (max-width: 600px) {
-    /* Reduce Text Sizes */
-    h1 {
-        font-size: 1.8em;
+@media screen and (max-width: 600px) {
+    /* Reduce the card grid size for mobile */
+    .game-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Adjusting grid layout */
+        gap: 8px; /* Reduce spacing */
+        justify-content: center;
     }
 
-    h2 {
-        font-size: 1.5em;
+    .card {
+        width: 60px; /* Reduce card size */
+        height: 60px;
     }
 
-    /* Adjust Category Buttons for 2x2 Layout */
-    .category-container {
+    /* Adjust header sizes */
+    h1, h2 {
+        font-size: 1.2rem; /* Reduce header font sizes */
+    }
+
+    /* Adjust button layout */
+    .button-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
-    .category-container button {
-        font-size: 1em;
-        padding: 10px;
-    }
-
-    /* Reduce Game Header Text & Button Sizes */
-    .game-header h2 {
-        font-size: 1.3em;
-    }
-
-    .game-header button {
-        font-size: 1em;
-        padding: 6px 10px;
-    }
-
-    /* Reduce Score & Timer Sizes */
-    .score-timer {
-        font-size: 1.2em;
-        gap: 15px;
-    }
-
-    /* Make Cards Smaller but Keep 4 Columns */
-    .game-grid {
-        grid-template-columns: repeat(4, 60px);
-        gap: 5px;
-    }
-
-    .card {
-        width: 75px;
-        height: 75px;
-        font-size: 2em;
-    }
-
-    #game-result {
-        font-size: 1.2em;
+    .button-container button {
+        font-size: 0.9rem; /* Make buttons smaller */
+        padding: 8px;
     }
 }
+
 /* ✅ Small Phones (Most Mobile Devices) */
-@media (max-width: 480px) {
-    .game-grid {
-        grid-template-columns: repeat(4, 50px);
+@media screen and (max-width: 468px) {
+    /* Reduce the card grid size for smaller screens */
+    .game-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Keep 4 columns */
+        gap: 6px; /* Reduce spacing */
+        justify-content: center;
     }
 
     .card {
-        width: 70px;
-        height: 70px;
-        font-size: 1.8em;
+        width: 50px; /* Reduce card size */
+        height: 50px;
     }
 
-    h1 {
-        font-size: 1.6em;
+    /* Adjust header sizes */
+    h1, h2 {
+        font-size: 1.1rem; /* Further reduce header font sizes */
     }
 
-    h2 {
-        font-size: 1.3em;
+    /* Adjust button layout */
+    .button-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
-    .game-header button {
-        font-size: 0.9em;
-        padding: 5px 8px;
+    .button-container button {
+        font-size: 0.8rem; /* Make buttons smaller */
+        padding: 6px;
     }
 }
+
 
 /* ✅ Tablets & iPads */
 @media (max-width: 768px) {
