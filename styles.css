@@ -133,6 +133,7 @@ h2 {
     height: 100px;
     font-size: 2.5em;
     display: flex;
+    background: url('images/bg2.jpg') no-repeat center center/cover;
     align-items: center;
     justify-content: center;
     border-radius: 12px;
@@ -141,20 +142,17 @@ h2 {
     background-color:chocolate;
 }
 
-/* When a Card is Flipped (Face Up) */
-.card:not(.hidden) {
-    background: url('images/bg2.jpg') no-repeat center center/cover; /* Flipped Open Image */
-}
 
 /* Hidden Cards (Face Down) */
 .card.hidden {
-    background-color:chocolate
+    background-color: chocolate;
+    background-image: none;
 }
 
 /* Matched Cards */
 .matched {
     background-color: lightgreen;
-    pointer-events: none;
+    background-image: none;
 }
 
 /* Game Result Message */
