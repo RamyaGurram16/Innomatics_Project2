@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Memory Match Game</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container" id="home-page">
+            <h1>Memory Match Game</h1>
+            <h2>Select a Category</h2>
+            <div class="category-container">
+                <button
+                    onclick="selectCategory('Fruits')">Fruits&#127822;</button>
+                <button
+                    onclick="selectCategory('Emojis')">Emojis&#128151;</button>
+                <button
+                    onclick="selectCategory('Animals')">Animals&#128007;</button>
+                <button
+                    onclick="selectCategory('Vehicles')">Vehicles&#128663;</button>
+            </div>
+        </div>
+
+        <div class="container game-container" id="game-page"
+            style="display: none;">
+            <div class="game-header">
+                <button onclick="resetGame()" class="reset-btn">Reset
+                    Game</button>
+                <h2 id="selected-category"></h2>
+                <button onclick="goHome()" class="home-btn">Back to
+                    Home</button>
+            </div>
+            <div id="pre-game-options">
+                <button onclick="startGame()" class="start-btn">Start
+                    Game</button>
+            </div>
+            <div class="score-timer">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="timer">Time Left: <span id="time">30</span>s</div>
+            </div>
+            <div class="game-grid" id="game-grid"></div>
+            <div id="game-result"
+                style="display: none; font-size: 1.5em; color: darkblue; margin-top: 15px;"></div>
+
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

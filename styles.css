@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('images/bg.jpg'); 
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #f4f4f4; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    background:transparent;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 520px;
+    text-align: center;
+}
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    font-family:'Lucida handwriting';
+    color:crimson;
+}
+
+h2 {
+    font-size: 2em;
+    color:brown;
+    margin-bottom: 20px;
+
+}
+#selected-category{
+    font-size:2.5em;
+}
+.category-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+
+.category-container button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.category-container button:hover {
+    background-color:forestgreen;
+}
+
+/* Game Header */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-bottom:0px;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.game-header h2 {
+    flex: 1;
+    text-align: center;
+    font-size: 2em;
+    color: brown;
+}
+
+.game-header button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.game-header button:hover {
+    background-color: darkred;
+}
+#pre-game-options button{
+    background-color:goldenrod;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top:0px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Score and Timer */
+.score-timer {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 220px; 
+    font-size: 1.2em;
+    margin-top:10px;
+}
+
+.score, .timer {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Start Game Section */
+.start-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.start-container button {
+    background-color: forestgreen;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.start-container button:hover {
+    background-color: darkgreen;
+}
+
+/* Game Grid */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); 
+    gap: 10px; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom:0px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background:url('images/bg2.jpg')no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+.card.hidden {
+    background-color: chocolate;
+    background-image: none;
+}
+
+.matched {
+    background-color: lightgreen;
+    background-image: none;
+}
+
+
+/* Style for Game Result Message */
+#game-result {
+    font-size: 1.8em;
+    color: darkblue;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .game-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5em;
+    }
+
+    .game-header {
+        flex-direction: row;
+    }
+
+    .start-container {
+        flex-direction: column;
+    }
+
+    .score-timer {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
